@@ -1,0 +1,56 @@
+/* The Copper Ladle — page frame: a dark room around the lit diner canvas. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #241708;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+main {
+  text-align: center;
+  padding: 16px;
+}
+
+canvas {
+  width: min(1280px, 96vw);
+  height: auto;
+  border: 4px solid #5d3d22;
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  background: #f6ddb0;
+}
+
+.caption {
+  color: #d9b98a;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+/* Shot mode (?shot=…): the canvas fills the frame edge to edge for screenshots. */
+body.shot {
+  display: block;
+  background: #f6ddb0;
+}
+
+body.shot main {
+  padding: 0;
+}
+
+body.shot canvas {
+  width: 1280px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.shot .caption {
+  display: none;
+}
